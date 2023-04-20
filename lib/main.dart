@@ -35,12 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
         key: _bottomNavigationKey,
         index: 1,
         height: 60.0,
-        items: [
-          SvgPicture.asset('../assets/icon_map.svg', height: 26, width: 26),
-          SvgPicture.asset('../assets/icon_home.svg', height: 26, width: 26),
-          SvgPicture.asset('../assets/icon_notification.svg',
-              height: 26, width: 26),
-        ],
         color: Color(0xFF00DA30),
         buttonBackgroundColor: Color(0xFF00DA30),
         backgroundColor: Color(0xFFFAFAFA),
