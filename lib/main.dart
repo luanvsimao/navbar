@@ -90,7 +90,6 @@ class _ModalSheetState extends State<ModalSheet> {
   }
 }
 
-
 /* Navbar ---------------------------------------------------------
 class MyHomePage extends StatefulWidget {
   @override
