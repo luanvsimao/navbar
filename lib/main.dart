@@ -36,13 +36,13 @@ class _ModalSheetState extends State<ModalSheet> {
             builder: (BuildContext context) {
               return Container(
                 height: 600,
-                color: Color(0xFFFAFAFA),
+                color: const Color(0xFFFAFAFA),
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         child: const Text(
                           'Pronto para escanear',
                           style: TextStyle(
@@ -54,12 +54,31 @@ class _ModalSheetState extends State<ModalSheet> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         child: SvgPicture.asset('../assets/Conectar.svg',
                             height: 120, width: 120),
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
+                        child: Wrap(
+                          alignment: WrapAlignment.center,
+                          spacing:
+                              8.0, // Espaçamento horizontal entre os filhos
+                          runSpacing:
+                              4.0, // Espaçamento vertical entre as linhas
+                          children: [
+                            const Text(
+                              'Aproxime o celular da tag para cadastrar o dispositivo.',
+                              style: TextStyle(
+                                fontFamily: 'Axiforma',
+                                fontSize: 16,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xFF0C1E10),
+                              ),
+                            ),
+                          ],
+                        ),
+                        /*
                         child: const Text(
                           'Aproxime o celular da tag para cadastrar o dispositivo.',
                           style: TextStyle(
@@ -68,15 +87,15 @@ class _ModalSheetState extends State<ModalSheet> {
                             fontWeight: FontWeight.normal,
                             color: Color(0xFF0C1E10),
                           ),
-                        ),
+                        ),*/
                       ),
                       ButtonCustom(
                         onPressed: () {},
                         text: "Cancelar",
                         size: 'sm',
-                        borderColor: Color(0xFF00DA30),
+                        borderColor: const Color(0xFF00DA30),
                         outline: true,
-                        textColor: Color(0xFF00DA30),
+                        textColor: const Color(0xFF00DA30),
                       ),
                     ],
                   ),
