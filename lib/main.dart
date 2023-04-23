@@ -30,7 +30,7 @@ class _ListagemAnimaisState extends State<ListagemAnimais> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(8)),
         color: Color(0xFFF0F0F0),
       ),
@@ -119,7 +119,7 @@ class _ListagemAnimaisState extends State<ListagemAnimais> {
                       SvgPicture.asset('../assets/heart.svg',
                           height: 22, width: 22),
                       SizedBox(width: 10), // espaço entre o ícone e o texto
-                      Text(
+                      const Text(
                         '48 BPM',
                         style: TextStyle(
                           fontFamily: 'Axiforma',
