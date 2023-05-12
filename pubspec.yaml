@@ -32,7 +32,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg:
-  modal_bottom_sheet: ^2.1.2
+  modal_bottom_sheet:
+  flutter_native_splash:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -15,12 +15,99 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor:
             Color(0xFFFAFAFA), // aqui você pode definir a cor de fundo
-        body: ListagemAnimais(),
+        body: DadosdosAnimais(),
       ),
     );
   }
 }
 
+class DadosdosAnimais extends StatefulWidget {
+  @override
+  _DadosdosAnimaisState createState() => _DadosdosAnimaisState();
+}
+
+class _DadosdosAnimaisState extends State<DadosdosAnimais> {
+  late int tab = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          margin: EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          height: 60,
+          decoration: BoxDecoration(
+            color: Color(0xFF00DA30),
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () => setState(() => {tab = 0}),
+                  child: Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(right: 5),
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: tab == 0
+                          ? Color(0xFF0C1E10).withOpacity(0.4)
+                          : Colors.transparent,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: const Text(
+                      'Dados',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: GestureDetector(
+                  onTap: () => setState(() => {tab = 1}),
+                  child: Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.only(left: 5),
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: tab == 1
+                          ? Color(0xFF0C1E10).withOpacity(0.4)
+                          : Colors.transparent,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: const Text(
+                      'Localização',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        if (tab == 0)
+          Container(
+            child: Text('mamae do luan'),
+          ),
+        if (tab == 1)
+          Container(
+            child: Text('mamae do vini'),
+          ),
+      ],
+    );
+  }
+}
+
+
+
+/* Card Animal ----------------------------------------------
 class ListagemAnimais extends StatefulWidget {
   @override
   _ListagemAnimaisState createState() => _ListagemAnimaisState();
@@ -139,7 +226,7 @@ class _ListagemAnimaisState extends State<ListagemAnimais> {
     );
   }
 } 
-
+*/
 
 /* Modal ---------------------------------------------------------
 class ModalSheet extends StatefulWidget {
