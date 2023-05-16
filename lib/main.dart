@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Scaffold(
         backgroundColor:
-            Color(0xFFFAFAFA), // aqui você pode definir a cor de fundo
+            const Color(0xFFFAFAFA), // aqui você pode definir a cor de fundo
         body: DadosdosAnimais(),
       ),
     );
@@ -34,11 +34,11 @@ class _DadosdosAnimaisState extends State<DadosdosAnimais> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.all(20),
+          margin: const EdgeInsets.all(20),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           height: 60,
           decoration: BoxDecoration(
-            color: Color(0xFF00DA30),
+            color: const Color(0xFF00DA30),
             borderRadius: BorderRadius.circular(30),
           ),
           child: Row(
@@ -52,7 +52,7 @@ class _DadosdosAnimaisState extends State<DadosdosAnimais> {
                     height: 40,
                     decoration: BoxDecoration(
                       color: tab == 0
-                          ? Color(0xFF0C1E10).withOpacity(0.4)
+                          ? const Color(0xFF0C1E10).withOpacity(0.4)
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -75,7 +75,7 @@ class _DadosdosAnimaisState extends State<DadosdosAnimais> {
                     height: 40,
                     decoration: BoxDecoration(
                       color: tab == 1
-                          ? Color(0xFF0C1E10).withOpacity(0.4)
+                          ? const Color(0xFF0C1E10).withOpacity(0.4)
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -94,12 +94,215 @@ class _DadosdosAnimaisState extends State<DadosdosAnimais> {
         ),
         if (tab == 0)
           Container(
-            child: Text('mamae do luan'),
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
+            child: Column(
+              crossAxisAlignment:
+                  CrossAxisAlignment.start, // Alinha os widgets à esquerda
+              children: [
+                Row(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Alinha os widgets ao topo
+                  children: [
+                    SvgPicture.asset('../assets/profile.svg',
+                        height: 16, width: 16),
+                    const SizedBox(
+                        width: 8), // Espaço entre o ícone e o primeiro texto
+                    Text(
+                      'Apelido',
+                      style: TextStyle(
+                        color: const Color(0xFF0C1E10).withOpacity(0.6),
+                        fontFamily: 'Axiforma',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                    height: 6), // Espaço entre o primeiro e o segundo texto
+                Row(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Alinha os widgets ao topo
+                  children: const [
+                    Text(
+                      'Mini boi boi boi',
+                      style: TextStyle(
+                        fontFamily: 'Axiforma',
+                        fontSize: 24,
+                        color: Color(0xFF0C1E10),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        if (tab == 0)
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
+            child: Column(
+              crossAxisAlignment:
+                  CrossAxisAlignment.start, // Alinha os widgets à esquerda
+              children: [
+                Row(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Alinha os widgets ao topo
+                  children: [
+                    SvgPicture.asset('../assets/raca.svg',
+                        height: 16, width: 16),
+                    const SizedBox(
+                        width: 8), // Espaço entre o ícone e o primeiro texto
+                    Text(
+                      'Raça',
+                      style: TextStyle(
+                        color: const Color(0xFF0C1E10).withOpacity(0.6),
+                        fontFamily: 'Axiforma',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                    height: 6), // Espaço entre o primeiro e o segundo texto
+                Row(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Alinha os widgets ao topo
+                  children: const [
+                    Text(
+                      'Hereford',
+                      style: TextStyle(
+                        fontFamily: 'Axiforma',
+                        fontSize: 24,
+                        color: Color(0xFF0C1E10),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        if (tab == 0)
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
+            child: Column(
+              crossAxisAlignment:
+                  CrossAxisAlignment.start, // Alinha os widgets à esquerda
+              children: [
+                Row(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Alinha os widgets ao topo
+                  children: [
+                    SvgPicture.asset('../assets/data.svg',
+                        height: 16, width: 16),
+                    const SizedBox(
+                        width: 8), // Espaço entre o ícone e o primeiro texto
+                    Text(
+                      'Data de Nascimento',
+                      style: TextStyle(
+                        color: const Color(0xFF0C1E10).withOpacity(0.6),
+                        fontFamily: 'Axiforma',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                    height: 6), // Espaço entre o primeiro e o segundo texto
+                Row(
+                  crossAxisAlignment:
+                      CrossAxisAlignment.start, // Alinha os widgets ao topo
+                  children: const [
+                    Text(
+                      '12/04/2022',
+                      style: TextStyle(
+                        fontFamily: 'Axiforma',
+                        fontSize: 24,
+                        color: Color(0xFF0C1E10),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        if (tab == 0)
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
+            child: Column(
+              crossAxisAlignment:
+                  CrossAxisAlignment.start, // Alinha os widgets à esquerda
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment
+                            .start, // Alinha os widgets ao topo
+                        children: [
+                          Text(
+                            'Peso',
+                            style: TextStyle(
+                              color: const Color(0xFF0C1E10).withOpacity(0.6),
+                              fontFamily: 'Axiforma',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
+                          const Text(
+                            '124kg',
+                            style: TextStyle(
+                              fontFamily: 'Axiforma',
+                              fontSize: 24,
+                              color: Color(0xFF0C1E10),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment
+                            .start, // Alinha os widgets ao topo
+                        children: [
+                          Text(
+                            'Sexo',
+                            style: TextStyle(
+                              color: const Color(0xFF0C1E10).withOpacity(0.6),
+                              fontFamily: 'Axiforma',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
+                          const Text(
+                            'Macho',
+                            style: TextStyle(
+                              fontFamily: 'Axiforma',
+                              fontSize: 24,
+                              color: Color(0xFF0C1E10),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         if (tab == 1)
-          Container(
-            child: Text('mamae do vini'),
-          ),
+          if (tab == 1)
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('../assets/images/maps.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
       ],
     );
   }

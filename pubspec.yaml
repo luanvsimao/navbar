@@ -67,6 +67,7 @@ flutter:
   assets:
       - assets/fonts/
       - assets/images/Icon_cowprod.png
+      - assets/images/maps.png
   #   - icons/icon_map.svg
   #  - icons/icon_notification.svg
 
