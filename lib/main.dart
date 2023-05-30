@@ -15,12 +15,143 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor:
             const Color(0xFFFAFAFA), // aqui você pode definir a cor de fundo
-        body: DadosdosAnimais(),
+        body: Notificacoes(),
       ),
     );
   }
 }
 
+class Notificacoes extends StatefulWidget {
+  @override
+  _NotificacoesState createState() => _NotificacoesState();
+}
+
+class _NotificacoesState extends State<Notificacoes> {
+  late int tab = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.all(32),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+      decoration: BoxDecoration(
+        color: const Color(0xFFECECEC),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: IntrinsicHeight(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    child: const Text(
+                      'Verificamos uma alteração',
+                      style: TextStyle(
+                          fontFamily: 'Axiforma',
+                          color: Color(0xFF0C1E10),
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 4.0),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    alignment: Alignment.centerRight,
+                    width: double.infinity,
+                    child: const Text(
+                      'há 1min',
+                      style: TextStyle(
+                        fontFamily: 'Axiforma',
+                        color: Color.fromARGB(146, 12, 30, 16),
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 16.0),
+            Row(
+              children: [
+                Expanded(
+                  flex: 0,
+                  child: Container(
+                      alignment: Alignment.centerLeft,
+                      width: 32,
+                      height: 32,
+                      child: const CircleAvatar(
+                        backgroundImage:
+                            AssetImage('../assets/images/Icon_cowprod.png'),
+                        backgroundColor: Color(0xFFFCFCFC),
+                      )),
+                ),
+                SizedBox(width: 8.0),
+                Expanded(
+                  flex: 0,
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    child: const Text(
+                      'James II',
+                      style: TextStyle(
+                        fontFamily: 'Axiforma',
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF0C1E10),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 8.0),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    child: const Text(
+                      '#38724951',
+                      style: TextStyle(
+                        fontFamily: 'Axiforma',
+                        fontSize: 16,
+                        color: Color(0xFF0C1E10),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 4.0),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(70, 244, 49, 49),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'estressado',
+                        style: TextStyle(
+                          color: Color(0xffF43131),
+                          fontFamily: 'Axiforma',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/* Dados do boi ------------------------------------------
 class DadosdosAnimais extends StatefulWidget {
   @override
   _DadosdosAnimaisState createState() => _DadosdosAnimaisState();
@@ -307,8 +438,7 @@ class _DadosdosAnimaisState extends State<DadosdosAnimais> {
     );
   }
 }
-
-
+*/
 
 /* Card Animal ----------------------------------------------
 class ListagemAnimais extends StatefulWidget {
